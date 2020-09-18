@@ -4,8 +4,8 @@ public class Sequence {
 	
 	public void sequence() {
 		while(true) {
-			System.out.println("공식을 선택하세요.");
-			System.out.println("1.등차수열의 합  2.등비수열의 합  종료:이 외  숫자 입력");
+			System.out.println("\n공식을 선택하세요.");
+			System.out.println("1.등차수열의 합  2.등비수열의 합  종료:이 외 숫자 입력");
 			int menu = s.nextInt();
 			if(menu == 1) {
 				arithProgression();
@@ -17,14 +17,20 @@ public class Sequence {
 				break;
 		}
 	}
-	private void arithProgression() { //등차수열의 합
+	
+	//등차수열의 합
+	private void arithProgression() { 
 		System.out.println("첫째항, 공차, 항의 개수를 순서대로 입력하시오.");
 		int a = s.nextInt();
 		int d = s.nextInt();
 		int n = s.nextInt();
 		System.out.println((n*(2*a + (n-1)*d))/2.0);
+		
+		return;
 	}
-	private void geoProgression() {	//등비수열의 합
+	
+	//등비수열의 합
+	private void geoProgression() {	
 		System.out.println("첫째항, 공비, 항의 개수를 순서대로 입력하시오.");
 		int a = s.nextInt();
 		double r = s.nextDouble();
@@ -33,5 +39,7 @@ public class Sequence {
 			System.out.println("잘못된 등비입니다.");
 		}
 		System.out.println((a*(Math.pow(r, n)-1)/(r-1)));
+		
+		return;
 	}
 }

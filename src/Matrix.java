@@ -4,14 +4,14 @@ public class Matrix {
 	
 	public void matrix() {
 		while(true) {
-			System.out.println("공식을 선택하세요.");
-			System.out.println("1.역행렬  2.행렬의 곱  종료:이 외  숫자 입력");
+			System.out.println("\n공식을 선택하세요.");
+			System.out.println("1.행렬의 곱  2.역행렬  종료:이 외 숫자 입력");
 			int menu = s.nextInt();
 			if(menu == 1) {
-				inverseMatrix();
+				mulMatrix();
 			}
 			else if(menu == 2) {
-				mulMatrix();
+				inverseMatrix();
 			}
 			else
 				break;
@@ -95,6 +95,7 @@ public class Matrix {
 			return;
 					
 		}	
+		
 	}
 	
 	//2차 정사각행렬의 역행렬
@@ -112,7 +113,7 @@ public class Matrix {
 			 return;
 		 }
 		 System.out.println(matrix[1][1]/d+"  "+(-matrix[0][1]/d)+"\n"
-				 +(-matrix[1][0]/d)+"  "+(matrix[0][0]/d)+"\n");
+				 +(-matrix[1][0]/d)+"  "+(matrix[0][0]/d));
 		 return;
 	}
 }

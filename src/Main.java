@@ -4,6 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
+		
+		//각 공식 클래스 객체 생성
 		Matrix m = new Matrix();
 		Sequence se = new Sequence();
 		StraightLine sl = new StraightLine();
