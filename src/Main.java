@@ -9,7 +9,7 @@ public class Main {
 		StraightLine sl = new StraightLine();
 		
 		while(true) {
-			System.out.println("수행할 공식의 범위를 선택하세요.");
+			System.out.println("수행할 공식의 범주를 선택하세요.");
 			System.out.println("1:행렬  2:수열  3:선  종료:이 외 숫자입력");
 			
 			int menu = s.nextInt();
