@@ -51,7 +51,10 @@ public class StraightLine {
 		double x2 = s.nextDouble();
 		double y2 = s.nextDouble();
 		
-		System.out.println("방정식: y="+(y2-y1)/(x2-x1)+"x+"+(y1-(y2-y1)/(x2-x1)*x1));
+		if((y1-(y2-y1)/(x2-x1)*x1) >= 0)
+			System.out.println("방정식: y="+(y2-y1)/(x2-x1)+"x+"+(y1-(y2-y1)/(x2-x1)*x1));
+		else
+			System.out.println("방정식: y="+(y2-y1)/(x2-x1)+"x"+(y1-(y2-y1)/(x2-x1)*x1));
 		
 		return;
 	}
