@@ -26,12 +26,15 @@ public class Main {
 				sl.straightLine();
 			}
 			
-			else
+			else {
+				System.out.println("종료합니다.");
+				
 				break;
-			
+			}
 			
 			
 		}
+		s.close();
 
 	}
 
