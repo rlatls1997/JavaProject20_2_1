@@ -85,7 +85,7 @@ public class Matrix {
 				for(int j = 0; j<row1; j++) {
 					int sum = 0;
 					for(int k = 0; k<row2; k++) {
-						sum += matrix1[i][k]*matrix2[k][j];
+						sum += matrix2[i][k]*matrix1[k][j];
 					}
 					matrix3[i][j] = sum;
 				}
