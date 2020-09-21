@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Matrix {
 	Scanner s = new Scanner(System.in);
@@ -5,7 +6,8 @@ public class Matrix {
 	public void matrix() {
 		while(true) {
 			System.out.println("\n공식을 선택하세요.");
-			System.out.println("1.행렬의 곱  2.역행렬  종료:이 외 숫자 입력");
+			System.out.println("1.행렬의 곱  2.역행렬  종료:이 외 입력");
+			try {
 			int menu = s.nextInt();
 			if(menu == 1) {
 				mulMatrix();
@@ -15,6 +17,10 @@ public class Matrix {
 			}
 			else
 				break;
+			}
+			catch(InputMismatchException e){
+				break;
+			}
 		}
 	}
 	//행렬의 곱

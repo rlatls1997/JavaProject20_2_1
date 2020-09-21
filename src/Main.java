@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -12,8 +13,8 @@ public class Main {
 		
 		while(true) {
 			System.out.println("수행할 공식의 범주를 선택하세요.");
-			System.out.println("1:행렬  2:수열  3:선  종료:이 외 숫자입력");
-			
+			System.out.println("1:행렬  2:수열  3:선  종료:이 외 입력");
+			try {
 			int menu = s.nextInt();
 			
 			if(menu == 1) {
@@ -29,6 +30,10 @@ public class Main {
 			else {
 				System.out.println("종료합니다.");
 				
+				break;
+			}
+			}
+			catch(InputMismatchException e){
 				break;
 			}
 			

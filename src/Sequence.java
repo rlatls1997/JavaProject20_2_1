@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Sequence {
 	Scanner s = new Scanner(System.in);
@@ -5,7 +6,8 @@ public class Sequence {
 	public void sequence() {
 		while(true) {
 			System.out.println("\n공식을 선택하세요.");
-			System.out.println("1.등차수열의 합  2.등비수열의 합  종료:이 외 숫자 입력");
+			System.out.println("1.등차수열의 합  2.등비수열의 합  종료:이 외 입력");
+			try {
 			int menu = s.nextInt();
 			if(menu == 1) {
 				arithProgression();
@@ -15,6 +17,10 @@ public class Sequence {
 			}
 			else
 				break;
+			}
+			catch(InputMismatchException e){
+				break;
+			}
 		}
 	}
 	

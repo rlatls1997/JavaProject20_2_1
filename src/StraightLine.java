@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class StraightLine {
@@ -6,7 +7,8 @@ public class StraightLine {
 	public void straightLine() {
 		while(true) {
 			System.out.println("\n공식을 선택하세요.");
-			System.out.println("1.두 점 사이 거리  2.두 점 지나는 직선  3.점과 직선 사이 거리  4.근의 공식  종료:이 외 숫자 입력");
+			System.out.println("1.두 점 사이 거리  2.두 점 지나는 직선  3.점과 직선 사이 거리  4.근의 공식  종료:이 외 입력");
+			try {
 			int menu = s.nextInt();
 			if(menu == 1) {
 				disOfdots();
@@ -22,6 +24,10 @@ public class StraightLine {
 			}
 			else
 				break;
+			}
+			catch(InputMismatchException e){
+				break;
+			}
 		}
 	}
 	//좌표평면상 두 점사이의 거리
