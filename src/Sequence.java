@@ -43,6 +43,7 @@ public class Sequence {
 		int n = s.nextInt();
 		if(r == 1) {
 			System.out.println("잘못된 등비입니다.");
+			return;
 		}
 		System.out.println((a*(Math.pow(r, n)-1)/(r-1)));
 		
